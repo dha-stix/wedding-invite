@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #fceefc;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wedding {
+  margin: 0 auto;
+  height: 80vh;
+  width: 70%;
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+}
+.wedding-picture {
+  height: 100%;
+  flex: 1;
+}
+img {
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px 0px 0px 15px;
+}
+.wedding-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+.wedding-couple {
+  margin: 50px 30px 0px 30px;
+  margin-bottom: 30px;
+  color: rgb(88, 14, 39);
+}
+form {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+form > * {
+  margin-bottom: 30px;
+  color: rgb(88, 14, 39);
+}
+input {
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid pink;
+  width: 100%;
+  outline: none;
+}
+button {
+  padding: 15px;
+  outline: none;
+  border: none;
+  width: 150px;
+  cursor: pointer;
+  color: white;
+  background-color: palevioletred;
+  transition: background-color 0.35s;
+}
+button:hover {
+  background-color: rgb(240, 173, 195);
+}
+@media screen and (max-width: 969px) {
+  .wedding {
+    animation-name: intro;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+  }
+  @keyframes intro {
+    0% {
+      top: -50px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+  .wedding-picture {
+    display: none;
+  }
+  .wedding-form {
+    flex: 1;
+  }
+  form > * {
+    margin-bottom: 40px;
+  }
+  body {
+    background: url("./pre-wedding.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+  }
+}
+@media screen and (max-width: 400px) {
+  .wedding-form {
+    padding: 30px;
+  }
+  form {
+    padding: 0px;
+  }
+}
