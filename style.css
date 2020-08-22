@@ -105,6 +105,10 @@ button:hover {
   }
 }
 @media screen and (max-width: 400px) {
+  .wedding {
+    height: auto;
+    width: 90%;
+  }
   .wedding-form {
     padding: 30px;
   }
